@@ -50,7 +50,7 @@ function addZero(d) {
 }
 
 function convertDate(d) {
-  var ts = new Date(d).toString();
+  let ts = new Date(d).toString();
   ts = ts.substr(0, 15);
   return ts;
 }
@@ -71,8 +71,8 @@ function onSubmit(e) {
   let sortedReturnResult = [];
   let result = [];
 
-  var Depart = convertDate(leavingOn);
-  var Return = convertDate(returningOn);
+  let Depart = convertDate(leavingOn);
+  let Return = convertDate(returningOn);
   ////one way logic
   if (onewayTrip.checked === true || returnTrip.checked === true) {
     sortedOneWayResult = Flight.filter((value) => {
@@ -93,17 +93,17 @@ function onSubmit(e) {
     });
   }
   if (onewayTrip.checked === true && sortedOneWayResult.length > 0) {
-    var div7 = document.querySelector("#parentDiv1");
+    let div7 = document.querySelector("#parentDiv1");
     div7.innerHTML = ``;
-    var div8 = document.querySelector("#div1234");
+    let div8 = document.querySelector("#div1234");
     div8.innerHTML = ``;
-    var divelement1 = document.querySelector("#header1234");
+    let divelement1 = document.querySelector("#header1234");
     divelement1 = document.querySelector("h1");
     divelement1.innerHTML = ''
     divelement1.innerHTML = `<h1 class="heading">${departFrom} > ${arrivingAt}<div class="date"><h4 class="h3">Depart: ${Depart}</h4></div></h1>`;
     if (sortedOneWayResult.length > 0) {
       sortedOneWayResult.map((productItem) => {
-        var div = document.getElementById("#parentDiv");
+        let div = document.getElementById("#parentDiv");
         div = document.querySelector("#div1234");
         div.innerHTML =
           div.innerHTML +
@@ -138,10 +138,11 @@ function onSubmit(e) {
       });
     }
   }
+  //return logic
   if (returnTrip.checked === true) {
-    var div5 = document.querySelector("#parentDiv1");
+    let div5 = document.querySelector("#parentDiv1");
     div5.innerHTML = ``;
-    var div6 = document.querySelector("#div1234");
+    let div6 = document.querySelector("#div1234");
     div6.innerHTML = ``;
 
     sortedReturnResult = Flight.filter((value) => {
@@ -170,11 +171,11 @@ function onSubmit(e) {
       );
       resultRangeArray = result;
     }
-    var divelement = document.getElementById("header1234");
+    let divelement = document.getElementById("header1234");
     divelement = document.querySelector("h1");
 
     divelement.innerHTML = `<h1 class="heading">${departFrom} > ${arrivingAt} > ${departFrom}<div class="date"><h3 class="h3">Return: ${Return}</h3><h4 class="h3">Depart: ${Depart}</h4></div></h1>`;
-    var div = document.getElementById("#parentDiv");
+    let div = document.getElementById("#parentDiv");
     div = document.querySelector("#div1234");
 
     if (result.length > 0) {
@@ -286,7 +287,7 @@ function hideCalender() {
 }
 
 function getCellDate() {
-  var tds = document.querySelectorAll("tbody td"),
+  let tds = document.querySelectorAll("tbody td"),
     i;
   for (i = 0; i < tds.length; i++) {
     let btn = tds[i];
@@ -325,9 +326,9 @@ function trackMonth(dir) {
 function rangeDisplay() {
   
   // display the search results based on the search slider
-  var inputelement = document.getElementById("rangeValueSpan");
-  var inputValue = inputelement.value;
-  var resultFinalArray = [];
+  let inputelement = document.getElementById("rangeValueSpan");
+  let inputValue = inputelement.value;
+  let resultFinalArray = [];
   inputelement = document.querySelector("#rangeV");
 
   inputelement.innerHTML = `<p class="inputValue">${inputValue}</p>`;
@@ -339,9 +340,9 @@ function rangeDisplay() {
     });
 
     if (resultFinalArray.length > 0) {
-      var div2 = document.querySelector("#div1234");
+      let div2 = document.querySelector("#div1234");
       div2.innerHTML = ``;
-      var div1 = document.getElementById("#parentDiv1");
+      let div1 = document.getElementById("#parentDiv1");
       div1 = document.querySelector("#parentDiv1");
       div1.innerHTML = ``;
       resultFinalArray.map((productItem) => {
@@ -389,7 +390,7 @@ function calender(month, year) {
   let firstDay = new Date(year, month, 1);
   let startDay = firstDay.getDay();
   let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  var monthLength = new Date(year, month + 1, 0).getDate();
+  let monthLength = new Date(year, month + 1, 0).getDate();
   let html = "";
   let dd;
 
@@ -401,13 +402,13 @@ function calender(month, year) {
   html += "</tr>";
 
   // CALENDAR PART
-  var count = 0; // count of table's <td> cells
+  let count = 0; // count of table's <td> cells
   if (startDay !== 0) {
     // Leave these cells blank
     html += "<tr><td colspan='" + startDay + "'></td>";
     count = startDay;
   }
-  for (var day = 1; day <= monthLength; day++) {
+  for (let day = 1; day <= monthLength; day++) {
     if (count % 7 === 0) {
       // new table row
       html += "<tr>";
@@ -426,7 +427,7 @@ function calender(month, year) {
       html += "</tr>";
     }
   }
-  var blankCells = 7 - (count % 7);
+  let blankCells = 7 - (count % 7);
   if (blankCells < 7) {
     html += "<td colspan='" + blankCells + "'></td></tr>";
   }
