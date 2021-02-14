@@ -50,10 +50,8 @@ function addZero(d) {
 }
 
 function convertDate(d) {
-  console.log('dateeeee', d)
   var ts = new Date(d).toString();
   ts = ts.substr(0, 15);
-  console.log('tssss', ts)
   return ts;
 }
 
