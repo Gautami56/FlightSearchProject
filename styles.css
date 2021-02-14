@@ -1,0 +1,414 @@
+/* Search Form */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-form {
+  border: 5px solid #ec1c24;
+  width: 400px;
+  height: 460px;
+  margin-top: 40px;
+  margin-left: -900px;
+  margin-bottom: -500px;
+  position: relative;
+  border-radius: 15px 45px;
+}
+
+#header {
+  height: 50px;
+  background: #ec1c24;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+border-radius: 10px 32px;
+}
+#header h1 {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 1.3em;
+}
+
+.flight {
+  padding: 20px;
+}
+.flight input,
+select {
+  color: #6b6a6a;
+}
+
+.info-box {
+  padding: 10px 0;
+  margin-top: 20px;
+  flex: 1;
+  border-right: 20px solid transparent;
+}
+.info-box:last-child {
+  border-right: none;
+}
+.info-box label {
+  display: block;
+  color: #6b6a6a;
+  font-size: 0.9em;
+}
+.info-box input[type="text"],
+input[type="submit"],
+select {
+  border: none;
+  outline: none;
+  background: #e2e0e0;
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+#flight-type {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -30px;
+  border-bottom: 1px dotted silver;
+}
+#flight-type .info-box {
+  flex: 0 1 25%;
+  display: flex;
+  align-items: center;
+}
+
+#flight-depart {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted silver;
+}
+#flight-depart .info-box {
+  position: relative;
+}
+#depart-res,
+#arrive-res {
+  position: absolute;
+  background: #ffffff;
+}
+#depart-res p,
+#arrive-res p {
+  padding: 7px 2px;
+  border-bottom: 1px dotted silver;
+}
+#depart-res p:hover,
+#arrive-res p:hover {
+  background: #ededed;
+  cursor: pointer;
+}
+
+#flight-dates {
+  display: flex;
+  border-bottom: 1px dotted silver;
+}
+
+#flight-info {
+  display: flex;
+
+  border-bottom: 1px dotted silver;
+}
+
+#flight-search .info-box {
+  display: flex;
+  justify-content: center;
+}
+#flight-search input[type="submit"] {
+  background: #ec1c24;
+  color: white;
+  padding: 0;
+  height: 30px;
+  font-size: 1.2em;
+}
+
+/* Calender */
+#calender {
+  border: 3px solid red;
+  padding: 5px;
+  opacity: 0;
+  background: #ffffff;
+  position: absolute;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+#calender .nav {
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+#calender .nav button {
+  background: #ff3240;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 5px 8px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+table {
+  border: 1px solid #dbdbdb;
+  background: #f4f4f4;
+}
+table td {
+  border: 1px solid #dbdbdb;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.normal {
+  color: rgba(0, 0, 0, 0.8);
+}
+.today {
+  background: #ff3240;
+  color: #ffffff;
+}
+.closed {
+  color: #dbdbdb;
+  cursor: default;
+}
+.picked {
+  background: green;
+}
+#month {
+  display: inline-block;
+}
+
+#confirm {
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  border: 5px solid #55af3a;
+  margin: 20px auto;
+  opacity: 1;
+}
+#confirm h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+#confirm p {
+  padding: 10px;
+}
+#confirm strong {
+  font-weight: 600;
+}
+
+#foo {
+  margin-top: 40px;
+  width: 500px;
+  height: 700px;
+
+  border: 5px solid red;
+}
+#app {
+  width: 700px;
+  height: 500px;
+  margin-top: 300px;
+  margin-left: 400px;
+  border: 5px solid green;
+}
+
+.product {
+  width: 700px;
+  height: auto;
+
+  margin-left: 430px;
+  /* margin-top: initial; */
+  border: 1px solid blue;
+}
+
+.onewaydiv {
+  margin-left: 5px;
+}
+
+.onewaydiv p {
+  font-weight: bolder;
+  font: italic small-caps bold 16px/2 cursive;
+
+}
+.onewaydiv span {
+  font-weight: bolder;
+  color: #ec1c24;
+}
+
+
+.onewaydiv h4 {
+  font-weight: bolder;
+}
+.returndiv {
+  margin-top: -166px;
+  margin-left: 300px;
+}
+
+.returndiv p {
+  font-weight: bolder;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+
+.returndiv h4 {
+  font-weight: bolder;
+}
+
+.returndiv span {
+  font-weight: bolder;
+  color: #ec1c24;
+}
+.product-image {
+  margin-top: -160px;
+  margin-left: 500px;
+}
+
+.buttonstyle {
+  height: 40px;
+  width: 150px;
+  background: #ec1c24;
+  color: white;
+  padding: 0;
+  border: 3px solid #ec1c24;
+  border-radius: 2px 2px 2px 2px;
+  font-size: 1.2em;
+}
+
+.heading {
+  border: 5px solid #ec1c24;
+  width: 700px;
+  height: 70px;
+  background-color: #ec1c24;
+  color: white;
+  /* margin-top: 430px; */
+  font-size: 15px;
+   margin-left: 260px;
+   padding-left: 20px;
+  padding-top: 10px; 
+  margin-left: 430px;
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: -10px;
+  
+  border-radius: 15px 15px 0px 0px;
+  
+  box-shadow: 5px 5px 5px grey;
+}
+
+.h3 {
+  font-weight: bolder;
+  font-size: 12px;
+  color: white;
+  /*margin-left: 700px;
+  margin-top: -40px;*/
+}
+
+.rangeSlider {
+  height: 100px;
+  width: 700px;
+  display: flex;
+  justify-content: left;
+}
+
+.inputSlider {
+  width: 300px;
+  margin-left: -380px;
+}
+.inputParent {
+  position: relative;
+}
+
+.inputValue {
+  background-color: transparent;
+  margin-top: 40px;
+  font-weight: bolder;
+  color: #ec1c24;
+  font-weight: bolder;
+  font-size: 20px;
+  /* position: fixed; */
+  /* padding: 2em; */
+  /* left: 5%;
+  top: 90%; */
+  /* transform: translateX(-50%); */
+  
+
+}
+
+.product {
+  width: 700px;
+  height: auto;
+padding-left: 8px;
+  margin-left: 430px;
+  margin-top: initial;
+  border: 2px solid #ec1c24;
+  border-radius: 8px 8px 8px 8px;
+  
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.parentDiv1 {
+  margin-bottom: 70px;
+}
+
+.div1style {
+  margin-top: -100px;
+  border-color: tomato;
+}
+.head {
+  margin-left: 700px;
+}
+
+.date {
+  padding-left: 450px;
+  margin-top: -55px;
+  padding-top: 15px;
+  height: 100px;
+  color: black;
+  
+
+}
+.rangeDiv{
+  border: 5px solid #ec1c24;
+  width: 400px;
+  margin-left: -20px;
+  border-radius: 0px 15px;
+  padding-top: 30px;
+  padding-left: 20px;
+  box-shadow: 5px 5px 5px grey;
+ 
+}
+.pageHeading {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: left;
+  background-color:#ec1c24 ;
+  color: white;
+  margin-left: 10px;
+ padding-top: -10px;
+  margin-bottom: -60px;
+padding-left: 40%;
+}
+
+.search-header {
+height: 40px;
+background-color: #ec1c24; 
+margin-top: -30px;
+width: 56%;
+margin-left: -20px;
+
+
+
+}
+
+.search-header h1 {
+  color: white;
+  margin-top:2px;
+  margin-left: 10px;
+}

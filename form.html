@@ -1,0 +1,125 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="styles.css">
+  <h2 class="pageHeading">FLIGHT SEARCH ENGINE</h2>
+  <h1 id="header1234"></h1>
+</head>
+<div class="form" id="search-form">
+
+  <div id="header">
+    <h1>FLIGHTS SEARCH FORM</h1>
+  </div>
+  <section>
+    <div class="flight" id="flightbox">
+
+      <form id="flight-form">
+        <!-- TRIP TYPE -->
+        <div id="flight-type">
+          <div class="info-box">
+            <input type="radio" name="flight-type" value="Return" id="return" checked />
+            <label for="return">RETURN</label>
+          </div>
+          <div class="info-box">
+            <input type="radio" name="flight-type" value="Single" id="one-way" />
+            <label for="one-way">ONE WAY</label>
+          </div>
+        </div>
+
+        <!-- FROM/TO -->
+        <div id="flight-depart">
+          <div class="info-box">
+            <label for="">LEAVING FROM</label>
+            <input type="text" id="dep-from" />
+            <div id="depart-res"></div>
+          </div>
+          <div class="info-box" id="arrive-box">
+            <label for="">ARRIVING AT</label>
+            <input type="text" id="dep-to" />
+            <div id="arrive-res"></div>
+          </div>
+        </div>
+
+        <!-- FROM/TO -->
+        <div id="flight-dates">
+          <div class="info-box">
+            <label for="">LEAVING ON</label>
+            <input type="text" id="leave-date" />
+          </div>
+          <div class="info-box" id="return-box">
+            <label for="">RETURNING ON</label>
+            <input type="text" id="return-date" />
+          </div>
+        </div>
+
+
+
+        <!-- PASSENGER INFO -->
+        <div id="flight-info">
+          <div class="info-box">
+            <label for="adults">PASSENGERS</label>
+            <select name="adults" id="adults">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+
+        </div>
+
+
+        <!-- SEARCH BUTTON -->
+        <div id="flight-search">
+          <div class="info-box">
+            <input type="submit" id="search-flight" value="SEARCH FLIGHTS" />
+          </div>
+        </div>
+
+      </form>
+      <div class="rangeDiv">
+        <div class="rangeSlider">
+
+          <div class="search-header">
+            <h1>REFINE FLIGHT SEARCH</h1>
+          </div>
+          <input id="rangeValueSpan" class="inputSlider" type="range" name="" value="0" min="3500" max="35000"
+            step="2000" onchange="rangeDisplay(this.value)">
+          <div id="rangeV"></div>
+          <!--  -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="calender">
+    <div class="nav">
+      <button id="prev"></button>
+      <p><span id="month"></span>
+        <span id="year"></span>
+      </p>
+      <button id="next">></button>
+    </div>
+    <table id="cal"></table>
+  </div>
+
+</div>
+
+</div>
+
+<body>
+  <div id="parentDiv"></div>
+
+  <div id="parentDiv1"></div>
+
+  <div id="div1234"></div>
+
+  <script type="text/javascript" src="./data.js"></script> 
+  <script type="text/javascript" src="./app.js"></script>
+
+</body>
+
+</html>
