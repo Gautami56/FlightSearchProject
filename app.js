@@ -58,6 +58,7 @@ function convertDate(d) {
 }
 
 function onSubmit(e) {
+  // on submitting to search oneway and return flights
   e.preventDefault();
   let form = this;
   let returnTrip = form.elements[0];
@@ -324,6 +325,8 @@ function trackMonth(dir) {
 }
 
 function rangeDisplay() {
+  
+  // display the search results based on the search slider
   var inputelement = document.getElementById("rangeValueSpan");
   var inputValue = inputelement.value;
   var resultFinalArray = [];
