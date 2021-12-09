@@ -30,7 +30,7 @@ body {
   border-radius: 10px 32px;
 }
 #header h1 {
-  color: rgba(0, 0, 0, 0.8);
+  color: #fff;
   margin-left: 20px;
   font-size: 1.3em;
 }
