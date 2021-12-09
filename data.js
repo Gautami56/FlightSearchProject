@@ -8,7 +8,7 @@ var jsonData = [
     arriveTime: "12.00 PM",
   },
   {
-    cost: 9500,
+    cost: 10500,
     from: "Pune",
     to: "Delhi",
     deptDate: "2021/02/1",
