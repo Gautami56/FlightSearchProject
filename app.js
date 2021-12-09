@@ -12,8 +12,6 @@ let months = [
   "November",
   "December1",
 ];
-
-console.log("months");
 let Flight = jsonData;
 let dateObj = new Date();
 let month = dateObj.getMonth();
