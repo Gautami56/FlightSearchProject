@@ -10,7 +10,7 @@ let months = [
   "September",
   "October",
   "November",
-  "December",
+  "December1",
 ];
 let Flight = jsonData;
 let dateObj = new Date();
@@ -99,7 +99,7 @@ function onSubmit(e) {
     div8.innerHTML = ``;
     let divelement1 = document.querySelector("#header1234");
     divelement1 = document.querySelector("h1");
-    divelement1.innerHTML = ''
+    divelement1.innerHTML = "";
     divelement1.innerHTML = `<h1 class="heading">${departFrom} > ${arrivingAt}<div class="date"><h4 class="h3">Depart: ${Depart}</h4></div></h1>`;
     if (sortedOneWayResult.length > 0) {
       sortedOneWayResult.map((productItem) => {
@@ -324,7 +324,6 @@ function trackMonth(dir) {
 }
 
 function rangeDisplay() {
-  
   // display the search results based on the search slider
   let inputelement = document.getElementById("rangeValueSpan");
   let inputValue = inputelement.value;
